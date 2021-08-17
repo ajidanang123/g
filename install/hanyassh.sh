@@ -3,7 +3,7 @@
 # 
 # ==================================================
 
-GitUser="vivianiyulianti45"
+GitUser="ajidanang123"
 #wget https://github.com/${GitUser}/
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
@@ -94,17 +94,17 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git
 echo "clear" >> .profile
 echo "neofetch" >> .profile
-echo "echo Mod by JAGOANNEON" >> .profile
+echo "echo Mod by AJIVPN" >> .profile
 
 # install webserver
 apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/${GitUser}/test1/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/${GitUser}/g/main/nginx.conf"
 mkdir -p /home/vps/public_html
 echo "<pre>Setup Mod By SL</pre>" > /home/vps/public_html/index.html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/${GitUser}/test1/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/${GitUser}/g/main/vps.conf"
 /etc/init.d/nginx restart
 
 
@@ -188,7 +188,7 @@ service sslh restart
 /etc/init.d/sslh restart
 
 #Matikan OpenVPN
-#wget https://raw.githubusercontent.com/${GitUser}/test1/main/install/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+#wget https://raw.githubusercontent.com/${GitUser}/g/main/install/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -205,7 +205,7 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://github.com/${GitUser}/test1/raw/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://github.com/${GitUser}/g/raw/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -237,25 +237,25 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O addhost "https://raw.githubusercontent.com/${GitUser}/test1/main/tambah/slhost.sh"
-wget -O about "https://raw.githubusercontent.com/${GitUser}/test1/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/${GitUser}/test1/main/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/${GitUser}/test1/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/${GitUser}/test1/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/${GitUser}/test1/main/hapus/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/${GitUser}/test1/main/member.sh"
-wget -o webmin "https://raw.githubusercontent.com/${GitUser}/test1/main/webmin.sh"
-wget -O delete "https://raw.githubusercontent.com/${GitUser}/test1/main/hapus/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/${GitUser}/test1/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/${GitUser}/test1/main/restart.sh"
-wget -O speedtest "https://github.com/${GitUser}/test1/raw/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/${GitUser}/test1/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/${GitUser}/test1/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/${GitUser}/test1/main/renew.sh"
-wget -O autokick "https://raw.githubusercontent.com/${GitUser}/test1/main/autokick.sh"
-wget -O ceklim "https://raw.githubusercontent.com/${GitUser}/test1/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/${GitUser}/test1/main/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/${GitUser}/test1/main/clear-log.sh"
+wget -O addhost "https://raw.githubusercontent.com/${GitUser}/g/main/tambah/slhost.sh"
+wget -O about "https://raw.githubusercontent.com/${GitUser}/g/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/${GitUser}/g/main/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/${GitUser}/g/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/${GitUser}/g/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/${GitUser}/g/main/hapus/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/${GitUser}/g/main/member.sh"
+wget -o webmin "https://raw.githubusercontent.com/${GitUser}/g/main/webmin.sh"
+wget -O delete "https://raw.githubusercontent.com/${GitUser}/g/main/hapus/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/${GitUser}/g/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/${GitUser}/g/main/restart.sh"
+wget -O speedtest "https://github.com/${GitUser}/g/raw/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/${GitUser}/g/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/${GitUser}/g/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/${GitUser}/g/main/renew.sh"
+wget -O autokick "https://raw.githubusercontent.com/${GitUser}/g/main/autokick.sh"
+wget -O ceklim "https://raw.githubusercontent.com/${GitUser}/g/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/${GitUser}/g/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/${GitUser}/g/main/clear-log.sh"
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 
