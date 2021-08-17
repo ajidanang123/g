@@ -2,4 +2,4 @@
 
 clear
 neofetch
-echo -e "JAGOANNEON"
+echo -e "MBUH"
