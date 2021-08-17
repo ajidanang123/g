@@ -24,8 +24,8 @@ echo "IP=$host" >> /var/lib/crot-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 #wget https://github.com/${GitUser}/
 GitUser="ajidanang123"
-wget https://raw.githubusercontent.com/ajidanang123/g/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/${GitUser}/g/main/websocket-python/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
+wget https://raw.githubusercontent.com/ajidanang123/g/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && sed -i -e ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/${GitUser}/g/main/websocket-python/websocket.sh && chmod +x websocket.sh && sed -i -e websocket.sh && screen -S websocket.sh ./websocket.sh
 wget https://raw.githubusercontent.com/${GitUser}/g/main/install/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 wget https://raw.githubusercontent.com/${GitUser}/g/main/install/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 wget https://raw.githubusercontent.com/${GitUser}/g/main/install/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
