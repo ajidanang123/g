@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ "${EUID}" -ne 0 ]; then
 echo "You need to run this script as root"
 exit 1
@@ -24,14 +25,14 @@ echo "IP=$host" >> /var/lib/crot-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 #wget https://github.com/${GitUser}/
 GitUser="ajidanang123"
-wget https://raw.githubusercontent.com/ajidanang123/g/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && sed -i -e ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/${GitUser}/g/main/websocket-python/websocket.sh && chmod +x websocket.sh && sed -i -e websocket.sh && screen -S websocket.sh ./websocket.sh
-wget https://raw.githubusercontent.com/${GitUser}/g/main/install/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
-wget https://raw.githubusercontent.com/${GitUser}/g/main/install/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
-wget https://raw.githubusercontent.com/${GitUser}/g/main/install/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://raw.githubusercontent.com/${GitUser}/g/main/install/shadowsocksobfs.sh && chmod +x shadowsocksobfs.sh && screen -S ss ./shadowsocksobfs.sh
+wget https://raw.githubusercontent.com/ajidanang123/g/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && sed -i -e 's/\r$//' ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/${GitUser}/g/main/websocket-python/websocket.sh && sed -i -e 's/\r$//' websocket.sh && chmod +x websocket.sh && sed -i -e 's/\r$//' websocket.sh && screen -S websocket.sh ./websocket.sh
+wget https://raw.githubusercontent.com/${GitUser}/g/main/install/sstp.sh && chmod +x sstp.sh && sed -i -e 's/\r$//' sstp.sh && screen -S sstp ./sstp.sh
+wget https://raw.githubusercontent.com/${GitUser}/g/main/install/wg.sh && chmod +x wg.sh && sed -i -e 's/\r$//' wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/${GitUser}/g/main/install/ssr.sh && chmod +x ssr.sh && sed -i -e 's/\r$//' ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/${GitUser}/g/main/install/shadowsocksobfs.sh && chmod +x shadowsocksobfs.sh && sed -i -e 's/\r$//' shadowsocksobfs.sh && screen -S ss ./shadowsocksobfs.sh
 wget https://raw.githubusercontent.com/${GitUser}/g/main/install/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh
-wget https://raw.githubusercontent.com/${GitUser}/g/main/install/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://raw.githubusercontent.com/${GitUser}/g/main/install/ipsec.sh && chmod +x ipsec.sh && sed -i -e 's/\r$//' ipsec.sh && screen -S ipsec ./ipsec.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/websocket.sh
 rm -f /root/sstp.sh
