@@ -72,5 +72,5 @@ echo " Multi Login = kill "
 echo " Cara pakai : kill [nombor PID] "
 echo "-------------------------------------"
 
-echo " JOMBLOSSH"
+echo " AJIVPN"
 echo "";
